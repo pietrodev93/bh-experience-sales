@@ -79,9 +79,9 @@
   
   }
   h3{
-    font-size: 35px;
-    font-weight: 600;
+    @apply text-3xl xl:text-[35px] font-semibold
   }
+
   h4{
     font-size: 28px;
     font-weight:500;
