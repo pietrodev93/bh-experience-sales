@@ -69,12 +69,12 @@ export default function Home() {
                 La Bodyhack Experience trasforma il tuo viaggio nel Mediterraneo in un&apos;avventura indimenticabile.
               </p>
             </div>
-            <div className="flex-1 xl:flex items-center justify-center absolute -top-2 -right-8 xl:relative z-1">
+            <div className="flex-1 xl:flex items-center justify-center absolute top-2 right-0 xl:relative z-1">
               <Image
                 src={raga}
                 objectFit="contain"
                 alt="Hero"
-                className="max-w-[230px] xl:max-w-[600px] opacity-60 xl:opacity-100"
+                className="max-w-[220px] xl:max-w-[600px] opacity-60 xl:opacity-100"
               />
               
             </div>
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
       </section>
       <section className=" h-[60vh]">
-        <iframe width="100%" height="100%" className="aspect-video" src="https://www.youtube.com/embed/WoUbeNSB4SE?si=h1u2BMNoWbmJPBoU&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" className="aspect-video" src="https://www.youtube.com/embed/g3D6p4peqIU?si=CD0SuicEXsR4p2kN&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         {/* <Video src={getStarted} className="h-full" /> */}
       </section>
       <section className="flex flex-col gap-20 items-center justify-center my-20">

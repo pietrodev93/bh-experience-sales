@@ -6,7 +6,7 @@ const nextConfig = {
     domains : ['bodyhack.live'] 
   },
   output: 'export',
-  basePatcj: '/experience',
+  basePath: '/experience',
   images:{
     unoptimized: true,
   },
