@@ -16,35 +16,35 @@ import passPort from "../assets/passport.gif";
 import valigia from "../assets/valigia.gif";
 import fotocamera from "../assets/fotocamera.gif";
 import whatsapp from "../assets/whatsapp-white.png";
-import videoBH from '../assets/bhexp.mov'
-
-
 
 export default function Home() {
   const { ref, inView } = useInView();
 
   const itinerary = [
-    // {
-    //   image: 'https://bodyhack.live/wp-content/uploads/2024/03/IMG_0881-scaled.jpeg'
-    // },
     {
-      image: "https://bodyhack.live/wp-content/uploads/2024/03/IMG_4209.jpeg",
+      image: 'https://bodyhack.live/wp-content/uploads/2024/03/1b.jpg'
+    },
+    {
+      image: "https://bodyhack.live/wp-content/uploads/2024/03/2b.jpg",
     },
     {
       image:
-        "https://bodyhack.live/wp-content/uploads/2024/03/IMG_7322-scaled.jpeg",
+        "https://bodyhack.live/wp-content/uploads/2024/03/3b.jpg",
     },
     {
       image:
-        "https://bodyhack.live/wp-content/uploads/2024/03/IMG_7473-scaled.jpeg",
+        "https://bodyhack.live/wp-content/uploads/2024/03/4b.jpg",
     },
     {
       image:
-        "https://bodyhack.live/wp-content/uploads/2024/03/IMG_8532-scaled.jpeg",
+        "https://bodyhack.live/wp-content/uploads/2024/03/5b.jpg",
     },
-    { image: "https://bodyhack.live/wp-content/uploads/2024/03/IMG_8764.jpeg" },
-    { image: "https://bodyhack.live/wp-content/uploads/2024/03/IMG_8770.jpeg" },
-    { image: "https://bodyhack.live/wp-content/uploads/2024/03/IMG_8771.jpeg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/6b.jpg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/7b.jpg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/8b.jpg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/9b.jpg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/10b.jpg" },
+    { image: "https://bodyhack.live/wp-content/uploads/2024/03/IMG_8484.jpg" },
   ];
 
   const photoNav = [
@@ -454,19 +454,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer class="flex flex-col items-center justify-center">
-        <div class="flex flex-col justify-center items-center gap-5 py-7 w-full bg-[#3b5da7]">
+      <footer className="flex flex-col items-center justify-center">
+        <div className="flex flex-col justify-center items-center gap-5 py-7 w-full bg-[#3b5da7]">
           <Image
             alt="logo"
-            class="img-fluid"
+            className="img-fluid"
             src="https://bodyhack.live/wp-content/uploads/2024/03/Logo-Experience-White.png"
             width={350}
             height={72}
           />
-          <div class="flex items-center justify-center gap-5">
+          <div className="flex items-center justify-center gap-5">
             <a
               target="_blank"
-              class="social-icon"
+              className="social-icon"
               href="https://www.facebook.com/profile.php?id=100095451280257"
             >
               <Image
@@ -478,7 +478,7 @@ export default function Home() {
             </a>
             <a
               target="_blank"
-              class="social-icon"
+              className="social-icon"
               href="https://instagram.com/bodyhackchallenge?igshid=YzAwZjE1ZTI0Zg%3D%3D&utm_source=qr"
             >
               <Image
@@ -490,9 +490,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div class="flex flex-col xl:flex-row gap-10 xl:gap-0 justify-between items-center p-7 w-full bg-[#03143e] text-white">
-          <div class="flex-1">
-            <p class="mb-0 text-sm">
+        <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 justify-between items-center p-7 w-full bg-[#03143e] text-white">
+          <div className="flex-1">
+            <p className="mb-0 text-sm">
               © Copyright BodyHACK CHALLENGE. All Rights Reserved.
               <br />
               È un prodotto di AdAstra Revolution Srl - P.IVA 04729610271 -
@@ -500,7 +500,7 @@ export default function Home() {
               info@bodyhack.live - Pec: adastrarevolutionsrl@pec.it
             </p>
           </div>
-          <div class="flex-1 flex flex-col xl:flex-row gap-5 justify-center items-center">
+          <div className="flex-1 flex flex-col xl:flex-row gap-5 justify-center items-center">
             <a
               target="_blank"
               href="https://www.iubenda.com/privacy-policy/93345464"
@@ -513,7 +513,7 @@ export default function Home() {
             >
               Cookie policy
             </a>
-            <a href="#" class="iubenda-cs-preferences-link">
+            <a href="#" className="iubenda-cs-preferences-link">
               Preferenze Cookie
             </a>
             <a
