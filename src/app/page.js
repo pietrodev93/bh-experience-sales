@@ -15,6 +15,7 @@ import { useInView } from "react-intersection-observer";
 import passPort from "../assets/passport.gif";
 import valigia from "../assets/valigia.gif";
 import fotocamera from "../assets/fotocamera.gif";
+import gifGif from "../assets/gifGif.gif";
 import whatsapp from "../assets/whatsapp-white.png";
 
 export default function Home() {
@@ -65,6 +66,10 @@ export default function Home() {
         title: 'Barcellona'
       },
       {
+        image: 'https://bodyhack.live/wp-content/uploads/2024/03/navigazione.jpeg',
+        title: 'Navigazione',
+      },
+      {
         image: 'https://bodyhack.live/wp-content/uploads/2024/03/IMG_7823.jpg',
         title: 'La Goulette'
       },
@@ -91,11 +96,11 @@ export default function Home() {
         <Header />
         <div className="flex flex-col w-full h-full">
           <div className="flex w-full h-full relative">
-            <div className="flex flex-col items-start justify-center flex-1 gap-4 text-white z-40">
-              <div className="flex gap-3">
+            <div className="flex flex-col items-start justify-center flex-1 gap-10 text-white z-40 relative">
+              <div className="flex gap-2 absolute xl:relative top-5 bg-white text-black px-3 rounded-full">
                 {welcomeOnBoard.map((w, i) => (
                   <motion.h4
-                    className="uppercase font-semibold text-[20px] xl:text-2xl "
+                    className="uppercase font-semibold text-[18px] xl:text-xl"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{
@@ -118,17 +123,27 @@ export default function Home() {
                   width={600}
                   height={80}
                   alt="Bodyhack Experience"
+                  className="hidden xl:block"
+                />
+                <Image
+                  src="https://bodyhack.live/wp-content/uploads/2024/03/Logo-Experience-White.png"
+                  width={350}
+                  height={80}
+                  alt="Bodyhack Experience"
+                  className="block xl:hidden"
                 />
               </motion.div>
-              <p className="text-xl">
-                Sali a bordo insieme a noi per una crociera unica nel suo
-                genere, sulla magnifica nave MSC Grandiosa.
-              </p>
-              <p className="text-xl">
-                La Bodyhack Experience trasforma il tuo viaggio nel Mediterraneo
-                con un&apos;avventura incredibile organizzata in collaborazione
-                con MSC Crociere.
-              </p>
+              <div className="flex flex-col gap-5">
+                <p className="text-xl">
+                  Sali a bordo insieme a noi per una crociera unica nel suo
+                  genere, sulla magnifica nave MSC Grandiosa.
+                </p>
+                <p className="text-xl">
+                  La Bodyhack Experience trasforma il tuo viaggio nel Mediterraneo
+                  con un&apos;avventura incredibile organizzata in collaborazione
+                  con MSC Crociere.
+                </p>
+              </div>
             </div>
             <div className="flex-1 xl:flex items-center justify-center absolute top-2 right-0 xl:relative z-1">
               <Image
@@ -183,7 +198,7 @@ export default function Home() {
                         width={450}
                         height={450}
                         alt="Hero"
-                        className="aspect-square"
+                        className="aspect-[4/3] object-cover"
                       />
                       <div className="flex flex-col items-center">
                       <span className="text-xl font-semibold">
@@ -203,6 +218,7 @@ export default function Home() {
       </section>
       <section className="flex flex-col pb-20">
         <div className="flex flex-col xl:flex-row gap-20 items-center justify-center text-center pb-28">
+          <Image alt="valigia" src={gifGif} width={300} height={300} className="rounded-full"/>
           <h4 className="leading-tight">
             La vacanza che <br /> ti può dare
           </h4>
@@ -362,7 +378,7 @@ export default function Home() {
                 </li>
                 <li>
                   <p>
-                    <b>Completo:</b> La nostra esperienza unisce in maniera
+                    <b>Completezza:</b> La nostra esperienza unisce in maniera
                     impeccabile momenti di relax profondo, arricchimenti
                     culturali, attività fisiche bilanciate e un approccio sano
                     all’alimentazione.{" "}
@@ -383,7 +399,17 @@ export default function Home() {
         <Image alt="fotocamera" src={fotocamera} width={130} height={130}  className="absolute -top-40 left-20 -rotate-45 flex xl:hidden"/>
         <Image alt="fotocamera" src={fotocamera} width={200} height={200}  className="absolute -top-20 left-20 -rotate-45 hidden xl:flex"/>
         <h3>Cosa ti aspetta</h3>
-        <Carousel className="w-3/4">
+        <iframe
+          width="100%"
+          height="100%"
+          className="aspect-video"
+          src="https://www.youtube.com/embed/g3D6p4peqIU?si=CD0SuicEXsR4p2kN&amp;controls=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <Carousel className="w-3/4 pt-10">
           <CarouselContent className="-ml-1">
             {itinerary.map((_, index) => (
               <CarouselItem
@@ -411,19 +437,8 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
-      <section className=" h-[60vh]">
-        <iframe
-          width="100%"
-          height="100%"
-          className="aspect-video"
-          src="https://www.youtube.com/embed/g3D6p4peqIU?si=CD0SuicEXsR4p2kN&amp;controls=1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+  
         {/* <Video src={getStarted} className="h-full" /> */}
-      </section>
       <section className="flex flex-col gap-20 items-center justify-center my-20">
         <div className="w-[90%] xl:w-2/3 rounded-xl border-8 border-[#ef5d28] flex flex-col gap-10 xl:flex-row items-center justify-between p-5 xl:px-10 xl:py-20 mt-10">
           <div className="flex flex-col text-black text-center gap-5 lx:text-left  pt-8 xl:pt-0">
@@ -447,10 +462,10 @@ export default function Home() {
               <p className="text-sm">*posti limitati</p>
             </div>
           </div>
-          <div className="p-5 border-4 border-green-700 rounded-xl flex flex-col gap-4 items-center justify-center text-black aspect-video w-full xl:w-fit">
+          <div className="p-5 border-4 border-green-700 rounded-xl flex flex-col gap-4 items-center justify-center text-black aspect-video w-full xl:w-fit relative">
             <p>A partire da</p>
-            <h3>1.330 € </h3>
-            <p className="text-sm">p.p. su base doppia</p>
+            <h3>1.330 €*</h3>
+            <p className="text-[10px]">*p.p. su base doppia</p>
           </div>
         </div>
       </section>
@@ -493,7 +508,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row gap-10 xl:gap-0 justify-between items-center p-7 w-full bg-[#03143e] text-white">
           <div className="flex-1">
             <p className="mb-0 text-sm">
-              © Copyright BodyHACK CHALLENGE. All Rights Reserved.
+              © Copyright BodyHACK EXPERIENCE. All Rights Reserved.
               <br />
               È un prodotto di AdAstra Revolution Srl - P.IVA 04729610271 -
               Sede legale: Via Luigi Mariutto 74, Mirano (VE) 30035
@@ -513,16 +528,19 @@ export default function Home() {
             >
               Cookie policy
             </a>
-            <a href="#" className="iubenda-cs-preferences-link">
+            {/* <a href="#" className="iubenda-cs-preferences-link">
               Preferenze Cookie
-            </a>
-            <a
+            </a> */}
+            {/* <a
               target="_blank"
               href="<?php echo get_home_url();?>/termini-duso-e-condizioni-generali-di-vendita/"
             >
               Termini & Condizioni
-            </a>
+            </a> */}
           </div>
+        </div>
+        <div className="bg-[#03143e] text-white flex items-center justify-center w-full py-5">
+          <p className="text-xl">Sponsored by MSC Crociere</p>
         </div>
       </footer>
     </>
